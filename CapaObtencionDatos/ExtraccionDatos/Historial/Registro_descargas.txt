@@ -1,9 +1,0 @@
-	(2023-11-03 10:59:25.883711) -> {'proceso': 'EXTRACCION_DATOS', 'estado': 'EXITO'}
-	(2023-11-03 10:59:29.412833) -> {'proceso': 'EXTRACCION_DATOS', 'estado': 'EXITO'}
-	(2023-11-03 10:59:33.060238) -> {'proceso': 'EXTRACCION_DATOS', 'estado': 'EXITO'}
-	(2023-11-03 10:59:36.006170) -> {'proceso': 'EXTRACCION_DATOS', 'estado': 'EXITO'}
-	(2023-11-03 10:59:39.007372) -> {'proceso': 'EXTRACCION_DATOS', 'estado': 'EXITO'}
-	(2023-11-03 10:59:41.721789) -> {'proceso': 'EXTRACCION_DATOS', 'estado': 'EXITO'}
-	(2023-11-03 10:59:44.381669) -> {'proceso': 'EXTRACCION_DATOS', 'estado': 'EXITO'}
-	(2023-11-03 10:59:46.931142) -> {'proceso': 'EXTRACCION_DATOS', 'estado': 'EXITO'}
-	(2023-11-03 10:59:49.568231) -> {'proceso': 'DESCOMPRESION_ARCHIVO', 'estado': 'ERROR', 'seccion': 'Descompresión de archivo .zip', 'error': "[Errno 2] No such file or directory: 'c:\\\\Users\\\\USER\\\\Downloads\\\\Artemisa 2.0 - DataChallenge\\\\Programa\\\\Artemisa2.0\\\\CapaObtencionDatos\\\\ExtraccionDatos\\\\Dataset Descargados\\\\0037455-231002084531237.zip'"}
