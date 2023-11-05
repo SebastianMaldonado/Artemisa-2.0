@@ -1,3 +1,4 @@
+import time
 import sys, os
 sys.path.insert(0, f'{os.path.dirname(os.path.dirname(__file__))}')
 
@@ -23,6 +24,7 @@ while (True):
   res_descarga = extraccion.descargarListaDatasets()
   print(res_descarga)
   res_descarga = None
+  time.sleep(120)
 
 '''
  Para encontrar el resultado de cada operación de descarga consultar:
