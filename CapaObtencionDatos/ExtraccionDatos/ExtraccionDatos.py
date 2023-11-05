@@ -52,7 +52,7 @@ class ExtraccionDatos (VariablesFuncionamiento):
         while (res_consulta['estado'] == self.error and res_consulta['error'] == self.error_limitation_exceeded):
             res_consulta = self.enlazadorGBIF.buscarInfoDataset(criterios_busqueda)
             print("...Esperando a que se despeje el canal de descarga")
-            time.sleep(5)
+            time.sleep(20)
 
         if (res_consulta['estado'] == self.error):
             return res_consulta
