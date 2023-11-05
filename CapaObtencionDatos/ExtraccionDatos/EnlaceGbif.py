@@ -1,6 +1,7 @@
 from pygbif import occurrences
 from pygbif import species
 import os
+import time
 
 import sys
 sys.path.insert(0, f'{os.path.dirname(os.path.dirname(__file__))}')
@@ -71,7 +72,19 @@ class EnlaceGbif (VariablesFuncionamiento):
     def descargarDataset (self, llave_descarga) -> dict:
         #Descargar dataset por medio de la llave de descarga
         try:
-            occurrences.download_get(llave_descarga, path=self.direccion_descarga)
+            count_error = 0
+            reintentar = True
+            while (reintentar and count_error < 5):
+                try:
+                    occurrences.download_get(llave_descarga, path=self.direccion_descarga)
+                    reintentar = False
+                except Exception as excepcion:
+                    if (f'{excepcion}' == self.error_not_succeeded.replace('_descarga_', llave_descarga)):
+                        count_error += 1
+                        print("... Esperando habilitación de enlace")
+                        time.sleep(15)
+                    else:
+                        raise excepcion
         except Exception as excepcion:
             return {'proceso': self.proceso,
                     'estado': self.error, 
